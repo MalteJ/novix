@@ -1,4 +1,5 @@
 #!/bin/bash
 
+swapoff -a
 systemctl enable kubelet
-systemctl start kubelet
+systemctl restart kubelet

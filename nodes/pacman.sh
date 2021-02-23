@@ -4,4 +4,4 @@ pacman -S \
        wget curl \
        networkmanager net-tools \
        git \
-       kubeadm kubectl kubelet
+       kubeadm kubectl kubelet docker
