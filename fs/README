@@ -1,0 +1,17 @@
+███╗   ██╗ ██████╗ ██╗   ██╗██╗██╗  ██╗
+████╗  ██║██╔═══██╗██║   ██║██║╚██╗██╔╝
+██╔██╗ ██║██║   ██║██║   ██║██║ ╚███╔╝ 
+██║╚██╗██║██║   ██║╚██╗ ██╔╝██║ ██╔██╗ 
+██║ ╚████║╚██████╔╝ ╚████╔╝ ██║██╔╝ ██╗
+╚═╝  ╚═══╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝  ╚═╝
+                                       
+ [ fs ]
+
+
+This is the filesystem building toolkit.
+
+ - /boot is used for the boot partition
+ - /root is the static root filesystem and userspace components
+
+
+
