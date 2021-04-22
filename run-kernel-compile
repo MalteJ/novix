@@ -7,7 +7,7 @@ if [[ $EUID -ne 0 ]];then
     exit 1
 fi
 
-config="config.rpi4"
+config="kernel.config.rpi4"
 echo "Using: ${config}"
 cp -v ${config} linux/arch/arm64/configs/novix_defconfig
 cp -v ${config} linux/.config.old
