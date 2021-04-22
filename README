@@ -8,13 +8,20 @@
 An ArchLinux like operating system designed
 specifically for aarch64 architecture.
 
- [ Kernels ]
+[ Repository Structure ]
+
+ - [boot] - the boot partition
+ - [linux] - the linux kernel
+ - [root] - the filesystem for the operating system /
+ - [src] - the source and build tools for userspace
+
+
+[ Development Kernels ]
 
  - github.com/torvalds/linux
  - github.com/asahilinux/linux
  - github.com/kris-nova/linux
  - git.kernel.org/pub/scm/linux/kernel
 
- [ Userspace ]
 
 
