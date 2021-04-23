@@ -1,0 +1,36 @@
+%NAME%
+firmware-raspberrypi
+
+%VERSION%
+20201225-2
+
+%BASE%
+firmware-raspberrypi
+
+%DESC%
+Additional firmware for Raspberry Pi
+
+%URL%
+https://github.com/RPi-Distro/firmware-nonfree/commits/master/brcm
+
+%ARCH%
+any
+
+%BUILDDATE%
+1608932677
+
+%INSTALLDATE%
+1612563089
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+1603081
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+

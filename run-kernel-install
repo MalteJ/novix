@@ -7,26 +7,26 @@ echo "Installing Kernel..."
 
 ##
 # Device Tree
-cp -r ../linux/arch/arm64/boot/dts/allwinner/*dtb* boot/dtbs/allwinner
-cp -r ../linux/arch/arm64/boot/dts/amd/*dtb* boot/dtbs/amd
-cp -r ../linux/arch/arm64/boot/dts/amlogic/*dtb* boot/dtbs/amlogic
-cp -r ../linux/arch/arm64/boot/dts/apm/*dtb* boot/dtbs/apm
-cp -r ../linux/arch/arm64/boot/dts/arm/*dtb* boot/dtbs/arm
-cp -r ../linux/arch/arm64/boot/dts/broadcom/*dtb* boot/dtbs/broadcom
-cp -r ../linux/arch/arm64/boot/dts/freescale/*dtb* boot/dtbs/freescale
-cp -r ../linux/arch/arm64/boot/dts/hisilicon/*dtb* boot/dtbs/hisilicon
-cp -r ../linux/arch/arm64/boot/dts/marvell/*dtb* boot/dtbs/marvell
-cp -r ../linux/arch/arm64/boot/dts/mediatek/*dtb* boot/dtbs/mediatek
-cp -r ../linux/arch/arm64/boot/dts/nvidia/*dtb* boot/dtbs/nvidia
-cp -r ../linux/arch/arm64/boot/dts/qcom/*dtb* boot/dtbs/qcom
-cp -r ../linux/arch/arm64/boot/dts/rockchip/*dtb* boot/dtbs/rockchip
+cp -r linux/arch/arm64/boot/dts/allwinner/*dtb* boot/dtbs/allwinner
+cp -r linux/arch/arm64/boot/dts/amd/*dtb* boot/dtbs/amd
+cp -r linux/arch/arm64/boot/dts/amlogic/*dtb* boot/dtbs/amlogic
+cp -r linux/arch/arm64/boot/dts/apm/*dtb* boot/dtbs/apm
+cp -r linux/arch/arm64/boot/dts/arm/*dtb* boot/dtbs/arm
+cp -r linux/arch/arm64/boot/dts/broadcom/*dtb* boot/dtbs/broadcom
+cp -r linux/arch/arm64/boot/dts/freescale/*dtb* boot/dtbs/freescale
+cp -r linux/arch/arm64/boot/dts/hisilicon/*dtb* boot/dtbs/hisilicon
+cp -r linux/arch/arm64/boot/dts/marvell/*dtb* boot/dtbs/marvell
+cp -r linux/arch/arm64/boot/dts/mediatek/*dtb* boot/dtbs/mediatek
+cp -r linux/arch/arm64/boot/dts/nvidia/*dtb* boot/dtbs/nvidia
+cp -r linux/arch/arm64/boot/dts/qcom/*dtb* boot/dtbs/qcom
+cp -r linux/arch/arm64/boot/dts/rockchip/*dtb* boot/dtbs/rockchip
 
 ##
 # Apple
 #
-cp -r ../linux/arch/arm64/boot/dts/apple boot/dtbs/apple
+cp -r linux/arch/arm64/boot/dts/apple boot/dtbs/apple
 
 ##
 # Kernel Image
-cp -r ../linux/arch/arm64/boot/Image boot/Image
-cp -r ../linux/arch/arm64/boot/Image.gz boot/Image.gz
+cp -r linux/arch/arm64/boot/Image boot/Image
+cp -r linux/arch/arm64/boot/Image.gz boot/Image.gz

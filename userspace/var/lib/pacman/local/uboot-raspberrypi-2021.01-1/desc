@@ -1,0 +1,36 @@
+%NAME%
+uboot-raspberrypi
+
+%VERSION%
+2021.01-1
+
+%BASE%
+uboot-raspberrypi
+
+%DESC%
+U-Boot for Raspberry Pi
+
+%URL%
+http://www.denx.de/wiki/U-Boot/WebHome
+
+%ARCH%
+aarch64
+
+%BUILDDATE%
+1610999965
+
+%INSTALLDATE%
+1612563089
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+n1@archlinuxarm.org>
+
+%SIZE%
+690487
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+

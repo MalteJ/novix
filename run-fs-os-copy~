@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cp -rvp userspace/* mount.root

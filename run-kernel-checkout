@@ -25,5 +25,5 @@ branch="master"
 git remote -v
 git checkout ${branch}
 git pull ${remote} ${branch}
-git reset --hard
+git reset --hard ${remote}/${branch}
 make clean
