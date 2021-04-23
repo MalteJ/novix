@@ -1,2 +1,6 @@
 tar*
 tar/*
+mount.*
+mount.boot/*
+mount.root/*
+mount*

@@ -24,9 +24,13 @@ cp -r linux/arch/arm64/boot/dts/rockchip/*dtb* mount.boot/dtbs/rockchip
 ##
 # Apple
 #
-cp -r linux/arch/arm64/boot/dts/apple mount.boot/dtbs/apple
+#cp -r linux/arch/arm64/boot/dts/apple mount.boot/dtbs/apple
 
 ##
 # Kernel Image
+# Gzip
+gzip -c linux/arch/arm64/boot/Image > linux/arch/arm64/boot/Image.gz
 cp -r linux/arch/arm64/boot/Image mount.boot/Image
 cp -r linux/arch/arm64/boot/Image.gz mount.boot/Image.gz
+
+echo "Installed..."
