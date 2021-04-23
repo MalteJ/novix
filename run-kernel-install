@@ -7,30 +7,30 @@ echo "Installing Kernel..."
 
 ##
 # Device Tree
-cp -r linux/arch/arm64/boot/dts/allwinner/*dtb* mount.boot/dtbs/allwinner
-cp -r linux/arch/arm64/boot/dts/amd/*dtb* mount.boot/dtbs/amd
-cp -r linux/arch/arm64/boot/dts/amlogic/*dtb* mount.boot/dtbs/amlogic
-cp -r linux/arch/arm64/boot/dts/apm/*dtb* mount.boot/dtbs/apm
-cp -r linux/arch/arm64/boot/dts/arm/*dtb* mount.boot/dtbs/arm
-cp -r linux/arch/arm64/boot/dts/broadcom/*dtb* mount.boot/dtbs/broadcom
-cp -r linux/arch/arm64/boot/dts/freescale/*dtb* mount.boot/dtbs/freescale
-cp -r linux/arch/arm64/boot/dts/hisilicon/*dtb* mount.boot/dtbs/hisilicon
-cp -r linux/arch/arm64/boot/dts/marvell/*dtb* mount.boot/dtbs/marvell
-cp -r linux/arch/arm64/boot/dts/mediatek/*dtb* mount.boot/dtbs/mediatek
-cp -r linux/arch/arm64/boot/dts/nvidia/*dtb* mount.boot/dtbs/nvidia
-cp -r linux/arch/arm64/boot/dts/qcom/*dtb* mount.boot/dtbs/qcom
-cp -r linux/arch/arm64/boot/dts/rockchip/*dtb* mount.boot/dtbs/rockchip
+cp -vr linux/arch/arm64/boot/dts/allwinner/*dtb* mount.boot/dtbs/allwinner
+cp -vr linux/arch/arm64/boot/dts/amd/*dtb* mount.boot/dtbs/amd
+cp -vr linux/arch/arm64/boot/dts/amlogic/*dtb* mount.boot/dtbs/amlogic
+cp -vr linux/arch/arm64/boot/dts/apm/*dtb* mount.boot/dtbs/apm
+cp -vr linux/arch/arm64/boot/dts/arm/*dtb* mount.boot/dtbs/arm
+cp -vr linux/arch/arm64/boot/dts/broadcom/*dtb* mount.boot/dtbs/broadcom
+cp -vr linux/arch/arm64/boot/dts/freescale/*dtb* mount.boot/dtbs/freescale
+cp -vr linux/arch/arm64/boot/dts/hisilicon/*dtb* mount.boot/dtbs/hisilicon
+cp -vr linux/arch/arm64/boot/dts/marvell/*dtb* mount.boot/dtbs/marvell
+cp -vr linux/arch/arm64/boot/dts/mediatek/*dtb* mount.boot/dtbs/mediatek
+cp -vr linux/arch/arm64/boot/dts/nvidia/*dtb* mount.boot/dtbs/nvidia
+cp -vr linux/arch/arm64/boot/dts/qcom/*dtb* mount.boot/dtbs/qcom
+cp -vr linux/arch/arm64/boot/dts/rockchip/*dtb* mount.boot/dtbs/rockchip
 
 ##
 # Apple
 #
-#cp -r linux/arch/arm64/boot/dts/apple mount.boot/dtbs/apple
+#cp -rv linux/arch/arm64/boot/dts/apple mount.boot/dtbs/apple
 
 ##
 # Kernel Image
 # Gzip
-gzip -c linux/arch/arm64/boot/Image > linux/arch/arm64/boot/Image.gz
-cp -r linux/arch/arm64/boot/Image mount.boot/Image
-cp -r linux/arch/arm64/boot/Image.gz mount.boot/Image.gz
+gzip -v -c linux/arch/arm64/boot/Image > linux/arch/arm64/boot/Image.gz
+cp -rv linux/arch/arm64/boot/Image mount.boot/Image
+cp -rv linux/arch/arm64/boot/Image.gz mount.boot/Image.gz
 
 echo "Installed..."

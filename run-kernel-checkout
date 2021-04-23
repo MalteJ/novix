@@ -21,9 +21,11 @@ git remote add origin git@github.com:torvalds/linux.git
 #
 remote="torvalds"
 branch="master"
+tag="v5.12-rc8"
 
 git remote -v
-git checkout ${branch}
+git checkout tags/${tag} -b ${tag}
+#git checkout ${branch}
 git pull ${remote} ${branch}
 git reset --hard ${remote}/${branch}
 make clean

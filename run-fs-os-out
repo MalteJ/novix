@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cp -rvp mount.root/* userspace
+cp -rvp mount.boot/* boot
+sync
