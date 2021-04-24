@@ -5,23 +5,22 @@ cd linux
 ##
 # Development kernels and their remotes
 #
-#asahi       git@github.com:AsahiLinux/linux.git (fetch)
 git remote add asahi git@github.com:AsahiLinux/linux.git
-#kris-nova   git@github.com:kris-nova/linux.git (fetch)
 git remote add kris-nova git@github.com:kris-nova/linux.git
-#soc         git://git.kernel.org/pub/scm/linux/kernel/git/soc/soc.git (fetch)
 git remote add soc git://git.kernel.org/pub/scm/linux/kernel/git/soc/soc.git
-#torvalds    git@github.com:torvalds/linux.git (fetch)
 git remote add torvalds git@github.com:torvalds/linux.git
 git remote add origin git@github.com:torvalds/linux.git
+
+# arm64 tags https://git.kernel.org/pub/scm/linux/kernel/git/arm64/linux.git/refs/tags
+git remote add arm64 git://git.kernel.org/pub/scm/linux/kernel/git/arm64/linux.git
 
 ##
 # Define the remote and branch
 # to use for a checkout
 #
-remote="torvalds"
-branch="master"
-tag="v5.12-rc8"
+remote="arm64"
+branch="arm/apple-m1"
+tag="arm64-upstream"
 
 git remote -v
 git checkout tags/${tag} -b ${tag}
