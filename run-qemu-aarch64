@@ -6,6 +6,7 @@ qemu-system-aarch64 \
     -cpu cortex-a53 \
     -serial stdio \
     -kernel ./boot/Image \
+    -initrd ./boot/initramfs-linux.img \
     -append "root=/dev/vda2 rootfstype=ext4 rw console=ttyAMA0" \
     -hda dist/novix-aarch64-latest.img \
     -net nic,macaddr=de:ad:be:f0:12:34 \
