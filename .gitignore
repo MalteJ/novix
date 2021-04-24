@@ -4,3 +4,5 @@ mount.*
 mount.boot/*
 mount.root/*
 mount*
+dist/*
+dist*
