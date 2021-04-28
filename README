@@ -24,4 +24,9 @@ specifically for aarch64 architecture.
  - git.kernel.org/pub/scm/linux/kernel
 
 
+[ Userspace Notes ]
+
+ - ls (lsd)
+ - df (duf)
+
 
