@@ -1,6 +1,7 @@
 #!/bin/bash
 
 qemu-system-aarch64 \
+    -display curses \
     -m 256 \
     -M virt \
     -cpu cortex-a53 \
