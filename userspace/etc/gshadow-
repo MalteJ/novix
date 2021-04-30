@@ -13,7 +13,7 @@ floppy:!*::
 scanner:!*::
 power:!*::
 adm:!*::daemon
-wheel:!*::
+wheel:!*::alarm
 kmem:!*::
 tty:!*::
 utmp:!*::
@@ -42,3 +42,4 @@ systemd-timesync:!*::
 systemd-coredump:!*::
 uuidd:!*::
 dhcpcd:!*::
+alarm:!::

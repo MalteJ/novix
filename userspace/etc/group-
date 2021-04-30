@@ -13,7 +13,7 @@ floppy:x:94:
 scanner:x:96:
 power:x:98:
 adm:x:999:daemon
-wheel:x:998:
+wheel:x:998:alarm
 kmem:x:997:
 tty:x:5:
 utmp:x:996:
@@ -42,3 +42,4 @@ systemd-timesync:x:979:
 systemd-coredump:x:978:
 uuidd:x:68:
 dhcpcd:x:977:
+novix:x:1000:

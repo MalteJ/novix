@@ -5,7 +5,7 @@ ftp:x:11:
 mail:x:12:
 log:x:19:
 smmsp:x:25:
-proc:x:26:
+proc:x:26:polkitd
 games:x:50:
 lock:x:54:
 network:x:90:
@@ -42,4 +42,5 @@ systemd-timesync:x:979:
 systemd-coredump:x:978:
 uuidd:x:68:
 dhcpcd:x:977:
-alarm:x:1000:
+novix:x:1000:
+polkitd:x:102:

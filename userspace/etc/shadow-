@@ -1,4 +1,4 @@
-root:$6$Yyqutb6E.uNUiVY1$hcX9rXLyvUx7mc1t0JBANjeCIb5t6EJf8.LtIBPmRNtLlD5UOXRFL.vB2LxvI37YhA2j7eFo/yFBNqGMlLywv.:18663::::::
+root:$6$tblU1aokSt6d7Sx/$/ubfRS56F3u6XDTUzRhg7X8KpkdpBCMMBHHX4WSMFh1cBQ0XABZC/bVdFuN/hhlxoC.2xVqqCqBXVkBu0PJFF/:18746::::::
 bin:!*:18663::::::
 daemon:!*:18663::::::
 mail:!*:18663::::::
@@ -13,3 +13,4 @@ systemd-timesync:!*:18663::::::
 systemd-coredump:!*:18663::::::
 uuidd:!*:18663::::::
 dhcpcd:!*:18663::::::
+novix:$6$5pC9W7UBntN0vpqW$McnwxTYOXvWCLgiksUbjc9uLdlHxLSDckA5KQwfbBzh.tEXxPdK/JKkErA66SvN1GkOsf4K8df3LzfjrE.o8k.:18746:0:99999:7:::
