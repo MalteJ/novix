@@ -1,7 +1,0 @@
-#!/bin/bash
-
-bsdtar -xpf *tar.gz* -C root
-sync
-mv root/boot/* boot
-
-echo "Untarred and Flushed..."

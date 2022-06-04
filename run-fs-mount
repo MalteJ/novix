@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [ -z "$1" ]; then
-   echo "usage: run-mount /dev/sdN"
-   exit 1
-fi
-
-mount ${flags} ${1}1 mount.boot
-mount ${flags} ${1}2 mount.root

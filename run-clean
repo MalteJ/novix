@@ -1,5 +1,0 @@
-#!/bin/bash
-rm -vrf mount.boot/*
-rm -vrf mount.root/*
-rm -vrf *~
-rm -vrf .*~
