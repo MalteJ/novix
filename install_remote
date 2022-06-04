@@ -28,6 +28,7 @@ IP=$1
 NAME=$2
 USER=root
 
+echo "PROVISIONING: $NAME"
 echo "Begin sync [$USER@$IP]..."
 echo $2 > etc/hostname
 

@@ -19,7 +19,7 @@ echo "Purging /home/novix/src"
 rm -rvf /home/novix/src
 
 pacman -Ssy
-yes | pacman -S --noconfirm wget sudo emacs nmap zmap netcat git neofetch
+yes | pacman -S --noconfirm wget sudo emacs nmap zmap netcat git neofetch make fakeroot
 
 echo "Installing yay..."
 cd /home/novix/src
@@ -34,3 +34,12 @@ cd /home/novix
 git clone https://github.com/kris-nova/kryptid.git
 
 
+echo "Installing tailscale..."
+yay -S --noconfirm tailscale tailscale-git
+systemctl enable tailscaled
+systemctl start tailscaled
+
+
+# Optional system remote upgrade
+# yes | pacman -Syu --noconfirm
+# reboot now

@@ -15,19 +15,14 @@
 # =========================================================================== #
 
 default: help
-alice       =       69.193.119.179
-esme        =       185.3.94.67
 
-sync: alice esme
+sync: clean infra ## Sync all remotes
 
-alice:
-	@echo "Sync: alice   [$(alice)]"
-	@./sync $(alice) alice
+clean: ## Clean local artifacts
 
-esme:
-	@echo "Sync: esme    [$(esme)]"
-	@./sync $(esme) esme
+infra: ## Run all *.infra scripts
+	./*.infra
 
 .PHONY: help
-help:  ## 🤔 Show help messages for make targets
+help:  ## Show help messages for make targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}'
