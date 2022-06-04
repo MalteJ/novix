@@ -1,0 +1,46 @@
+#!/bin/bash
+# =========================================================================== #
+#            MIT License Copyright (c) 2022 Kris Nóva <kris@nivenly.com>      #
+#                                                                             #
+#                 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓                 #
+#                 ┃   ███╗   ██╗ ██████╗ ██╗   ██╗ █████╗   ┃                 #
+#                 ┃   ████╗  ██║██╔═████╗██║   ██║██╔══██╗  ┃                 #
+#                 ┃   ██╔██╗ ██║██║██╔██║██║   ██║███████║  ┃                 #
+#                 ┃   ██║╚██╗██║████╔╝██║╚██╗ ██╔╝██╔══██║  ┃                 #
+#                 ┃   ██║ ╚████║╚██████╔╝ ╚████╔╝ ██║  ██║  ┃                 #
+#                 ┃   ╚═╝  ╚═══╝ ╚═════╝   ╚═══╝  ╚═╝  ╚═╝  ┃                 #
+#                 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛                 #
+#                                                                             #
+#                        This machine kills fascists.                         #
+#                                                                             #
+# =========================================================================== #
+
+if [ -z "$1" ]; then
+    echo "Usage: ./sync <ip> <name>"
+    exit 1
+fi
+if [ -z "$2" ]; then
+    echo "Usage: ./sync <ip> <name>"
+    exit 1
+fi
+
+IP=$1
+NAME=$2
+USER=root
+
+echo "Begin sync [$USER@$IP]..."
+echo $2 > etc/hostname
+
+#
+# /etc
+#
+scp -r etc/* $USER@$IP:/etc/
+
+#
+# /home
+#
+scp -r home/* $USER@$IP:/home/
+
+#
+# Update novix
+ssh $USER@$IP "touch /var/log/novix.log && /home/novix/novix 2> /var/log/novix.log &"

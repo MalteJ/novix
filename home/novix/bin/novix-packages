@@ -1,0 +1,36 @@
+#!/bin/bash
+# =========================================================================== #
+#            MIT License Copyright (c) 2022 Kris Nóva <kris@nivenly.com>      #
+#                                                                             #
+#                 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓                 #
+#                 ┃   ███╗   ██╗ ██████╗ ██╗   ██╗ █████╗   ┃                 #
+#                 ┃   ████╗  ██║██╔═████╗██║   ██║██╔══██╗  ┃                 #
+#                 ┃   ██╔██╗ ██║██║██╔██║██║   ██║███████║  ┃                 #
+#                 ┃   ██║╚██╗██║████╔╝██║╚██╗ ██╔╝██╔══██║  ┃                 #
+#                 ┃   ██║ ╚████║╚██████╔╝ ╚████╔╝ ██║  ██║  ┃                 #
+#                 ┃   ╚═╝  ╚═══╝ ╚═════╝   ╚═══╝  ╚═╝  ╚═╝  ┃                 #
+#                 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛                 #
+#                                                                             #
+#                        This machine kills fascists.                         #
+#                                                                             #
+# =========================================================================== #
+
+echo "Purging /home/novix/src"
+rm -rvf /home/novix/src
+
+pacman -Ssy
+yes | pacman -S --noconfirm wget sudo emacs nmap zmap netcat git neofetch
+
+echo "Installing yay..."
+cd /home/novix/src
+YAY_VERSION="11.1.2"
+wget https://github.com/Jguer/yay/releases/download/v11.1.2/yay_${YAY_VERSION}_x86_64.tar.gz
+tar -xzf yay_${YAY_VERSION}_x86_64.tar.gz
+cd yay_${YAY_VERSION}_x86_64
+cp -v yay /bin/yay
+
+echo "Installing kryptid..."
+cd /home/novix
+git clone https://github.com/kris-nova/kryptid.git
+
+
