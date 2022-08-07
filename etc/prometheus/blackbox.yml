@@ -1,0 +1,7 @@
+modules:
+  http_2xx_get:
+    prober: http
+    http:
+      method: GET
+      fail_if_ssl: false
+      fail_if_not_ssl: true
