@@ -22,12 +22,14 @@ scrape_configs:
       - targets: ["alice.nivenly.com:9090"]
       - targets: ["esme.nivenly.com:9090"]
 
-  # requires prometheus-node-exporter
-  # - job_name: "node"
-  #   static_configs:
-  #     - targets: ["alice.nivenly.com:9100"]
-  #     - targets: ["esme.nivenly.com:9100"]
+  # get some handy metrics from the node exporter
+  - job_name: "node"
+    static_configs:
+      - targets: ["alice.nivenly.com:9100"]
+      - targets: ["esme.nivenly.com:9100"]
 
+  # do some blackbox probing to make sure we know when
+  # services are up and stuff
   - job_name: "blackbox"
     metrics_path: /probe
     params:
