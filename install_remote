@@ -16,11 +16,11 @@
 # =========================================================================== #
 
 if [ -z "$1" ]; then
-    echo "Usage: ./sync <ip> <name>"
+    echo "Usage: ./install_remote <ip> <name>"
     exit 1
 fi
 if [ -z "$2" ]; then
-    echo "Usage: ./sync <ip> <name>"
+    echo "Usage: ./install_remote <ip> <name>"
     exit 1
 fi
 

@@ -25,6 +25,3 @@ For example
 ./install_remote 185.3.94.67 esme
 ./install_remote 69.193.119.179 alice
 ```
-
-
-### Local Install
