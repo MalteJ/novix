@@ -18,8 +18,9 @@
 echo "Purging /home/novix/src"
 rm -rvf /home/novix/src
 
+yes | pacman -S --noconfirm archlinux-keyring
 pacman -Ssy
-yes | pacman -S --noconfirm wget sudo emacs nmap zmap netcat git neofetch make fakeroot
+yes | pacman -S --noconfirm --overwrite *.* wget sudo emacs nmap zmap netcat git neofetch make fakeroot
 
 echo "Installing yay..."
 cd /home/novix/src
@@ -39,6 +40,8 @@ yay -S --noconfirm tailscale tailscale-git
 systemctl enable tailscaled
 systemctl start tailscaled
 
+echo "Installing neofetch..."
+yay -S --noconfirm neofetch
 
 # Optional system remote upgrade
 # yes | pacman -Syu --noconfirm
