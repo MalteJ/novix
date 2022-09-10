@@ -1,5 +1,7 @@
 #!/bin/bash
 
 # Usage: ./install_remote <ip> <name>
-./install_remote 194.233.170.120 esme
-./install_remote 69.193.119.179 alice
+#./install_remote 194.233.170.120 esme
+#./install_remote 69.193.119.179 alice
+
+./install_remote 82.221.141.152 mazy
