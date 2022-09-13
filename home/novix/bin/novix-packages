@@ -19,9 +19,11 @@ echo "Purging /home/novix/src"
 rm -rvf /home/novix/src
 
 yes | pacman -S --noconfirm archlinux-keyring
-pacman -Ssy
-pacman -Syu 
-yes | pacman -S --noconfirm --overwrite *.* wget sudo emacs nmap zmap netcat git neofetch make fakeroot
+#pacman -Ssy
+#pacman -Syu
+yes | pacman -S --noconfirm --overwrite *.* wget sudo emacs git neofetch make fakeroot
+yes | pacman -S --noconfirm --overwrite *.* nmap zmap netcat stunnel hping screen
+
 
 echo "Installing yay..."
 cd /home/novix/src
@@ -34,6 +36,11 @@ cp -v yay /bin/yay
 echo "Installing kryptid..."
 cd /home/novix
 git clone https://github.com/kris-nova/kryptid.git
+
+echo "Installing osint..."
+cd /home/novix
+git clone https://github.com/kris-nova/osint.git
+
 
 
 echo "Installing tailscale..."
