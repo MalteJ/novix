@@ -3,3 +3,4 @@
 # Usage: ./install_remote <ip> <name>
 
 #./install_remote 69.193.119.179 alice
+#./install_remote 45.56.80.233 esme

@@ -19,11 +19,11 @@ echo "Purging /home/novix/src"
 rm -rvf /home/novix/src
 
 yes | pacman -S --noconfirm archlinux-keyring
-#pacman -Ssy
-#pacman -Syu
-yes | pacman -S --noconfirm --overwrite *.* wget sudo emacs git neofetch make fakeroot
-yes | pacman -S --noconfirm --overwrite *.* nmap zmap netcat stunnel hping screen
-
+pacman --overwrite "*" -Ssy
+pacman --overwrite "*" -Syu
+yes | pacman -S --noconfirm base-devel gcc
+yes | pacman -S --noconfirm wget sudo emacs git neofetch make fakeroot gcc
+yes | pacman -S --noconfirm nmap zmap netcat stunnel hping screen
 
 echo "Installing yay..."
 cd /home/novix/src
@@ -41,16 +41,22 @@ echo "Installing osint..."
 cd /home/novix
 git clone https://github.com/kris-nova/osint.git
 
-
-
 echo "Installing tailscale..."
 yay -S --noconfirm tailscale tailscale-git
 systemctl enable tailscaled
 systemctl start tailscaled
 
-echo "Installing neofetch..."
-yay -S --noconfirm neofetch
+echo "Installing mastodon..."
+yay -S --noconfirm mastodon postgresql
+systemctl enable mastodon-web
+systemctl enable mastodon-sidekiq
+systemctl enable mastodon-streaming
+systemctl enable postgresql
+systemctl start mastodon-web
+systemctl start mastodon-sidekiq
+systemctl start mastodon-streaming
+systemctl start postgresql
 
 # Optional system remote upgrade
-# yes | pacman -Syu --noconfirm
-# reboot now
+#yes | yay --overwrite "*" -Syu
+#reboot now
