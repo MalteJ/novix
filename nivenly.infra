@@ -2,5 +2,11 @@
 
 # Usage: ./install_remote <ip> <name>
 
-#./install_remote 69.193.119.179 alice
-#./install_remote 45.56.80.233 esme
+# Alice
+./install_remote alice.nivenly.com alice
+./install_ssh alice.nivenly.com alice
+
+# Esme
+./install_remote esme.nivenly.com esme
+#./install_ssh esme.nivenly.com esme
+

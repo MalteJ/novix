@@ -15,14 +15,23 @@
 #                                                                             #
 # =========================================================================== #
 
-mv -v *~       /tmp 2> /dev/null
-mv -v *.tar.gz /tmp 2> /dev/null
-mv -v *.zip    /tmp 2> /dev/null
-mv -v *.png    /tmp 2> /dev/null
-mv -v *.JPG    /tmp 2> /dev/null
-mv -v *.JPEG   /tmp 2> /dev/null
-mv -v *.jpg    /tmp 2> /dev/null
-mv -v *.jpeg   /tmp 2> /dev/null
-mv -v *.pdf    /tmp 2> /dev/null
-mv -v *.docx   /tmp 2> /dev/null
-mv -v \#*      /tmp 2> /dev/null
+if [ -z "$1" ]; then
+    echo "Usage: ./install_remote <ip> <name>"
+    exit 1
+fi
+if [ -z "$2" ]; then
+    echo "Usage: ./install_remote <ip> <name>"
+    exit 1
+fi
+
+IP=$1
+NAME=$2
+USER=root
+
+echo "SSH SYNC: $NAME"
+echo "Begin sync [$USER@$IP]..."
+
+#
+# /home/novix/.ssh
+#
+scp -r ${HOME}/.ssh/* $USER@$IP:/home/novix/.ssh

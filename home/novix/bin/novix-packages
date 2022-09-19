@@ -23,7 +23,7 @@ pacman --overwrite "*" -Ssy
 pacman --overwrite "*" -Syu
 yes | pacman -S --noconfirm base-devel gcc
 yes | pacman -S --noconfirm wget sudo emacs git neofetch make fakeroot gcc
-yes | pacman -S --noconfirm nmap zmap netcat stunnel hping screen
+yes | pacman -S --noconfirm rsync nmap zmap netcat stunnel hping screen
 
 echo "Installing yay..."
 cd /home/novix/src
