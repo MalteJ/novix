@@ -17,3 +17,6 @@
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
+
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_*

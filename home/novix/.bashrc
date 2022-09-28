@@ -25,7 +25,6 @@ export PATH=$PATH:${HOME}/bin:/var/lib/mastodon/bin
 export EDITOR=/usr/bin/emacs
 export RAILS_ENV=production
 
-
 # -------------------------
 # [ALIAS]
 # -------------------------
